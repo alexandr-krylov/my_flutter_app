@@ -57,6 +57,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _searchTerm = '';
 
   void _incrementCounter() {
     setState(() {
@@ -68,6 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
+  TextEditingController _controller =
+    TextEditingController(text: "Initial value here");
 
   @override
   Widget build(BuildContext context) {
@@ -115,6 +118,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const Text("Hello World!!!"),
             const Icon(Icons.cake, color: Colors.red, size: 20),
+            TextField(
+              controller: _controller,
+              onChanged: (String val) => _searchTerm = val,
+            ),
             Image.asset('assets/images/FPGAs-Icon_4x.jpg'),
             Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
           ],

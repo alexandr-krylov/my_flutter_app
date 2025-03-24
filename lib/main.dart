@@ -121,7 +121,13 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(
               controller: _controller,
               onChanged: (String val) => _searchTerm = val,
+              decoration: InputDecoration (
+                labelText: 'Email',
+                hintText: 'you@email.com',
+                icon: Icon(Icons.contact_mail),
+              ),
             ),
+
             Image.asset('assets/images/FPGAs-Icon_4x.jpg'),
             Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
           ],

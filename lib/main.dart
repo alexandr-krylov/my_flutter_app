@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-  TextEditingController _controller =
+  final TextEditingController _controller =
     TextEditingController(text: "Initial value here");
 
   @override
@@ -127,7 +127,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(Icons.contact_mail),
               ),
             ),
-
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(labelText: 'Password'),
+            ),
             Image.asset('assets/images/FPGAs-Icon_4x.jpg'),
             Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
           ],
